@@ -43,7 +43,7 @@ keys.addEventListener('click', e => {
             if (
                 firstValue && 
                 operator &&
-                previousKeyType !== '!oprator' && 
+                previousKeyType !== '!oprator' && //error
                 previousKeyType !== 'calculate'
                 ) {
                 const calcValue = calculate(firstValue, operator, secondValue);
@@ -86,7 +86,7 @@ keys.addEventListener('click', e => {
         }
         
         if (action !== 'clear') {
-            const clearButton = calculator.querySelector('[data-action=class=clear]');
+            const clearButton = calculator.querySelector('[data-action=class=clear]');//error 
             clearButton.textContent = 'CE';
         }
         if (action === 'calculate'){
@@ -116,10 +116,10 @@ keys.addEventListener('click', e => {
             }
         }
 
-        Array.from(key.parentNode.children)
+        Array.from(key.parentNode.children) //error 
         .forEach(k => k.classList.remove('is-depressed'))
     }
 
-});
+);
 
 
